@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<a href="${2:#}" target ="_blank">${1:<span>$0</span>}</a>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>:a</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Email - Link</description>
+</snippet>

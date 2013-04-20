@@ -1,0 +1,191 @@
+<snippet>
+    <content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>${1}</title>
+    <style type="text/css">
+
+    /* Run your email through Premailer (http://premailer.dialect.ca/) to bring these styles inline :)
+       It will:
+            * Discard any unused styles
+            * Convert everything to long-hand (email clients like that)
+            * Remove comments
+    */
+
+    /* Unless otherwise stated, feel free to edit any of the colors in here all you want. I just have some of the standard colors that I go to in here. */
+
+        /* RESET
+        Takes care of client specific bugs and quirks. Do not edit this.
+        ================= */
+        #outlook a {
+            padding: 0;
+        }
+        body {
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        .ExternalClass {
+            width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+        #backgroundTable {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+        /* End reset
+        ==================== */
+
+
+        /* Tables, layout, & Borders
+        -------------------------------
+        Use tables, tables, and more tables for layout and spacing. Nest them like your life depended on it. */
+
+        /* Remove spacing around Outlook 07, 10 tables */
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        /* Essentially, acts as the <body> of the email. I chose to call it "page." */
+        .page, #backgroundTable {
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+            line-height: 100% !important;
+        }
+        /* Holds the content (w/ exception to pre-header/preview and post-footer content) */
+        .outer-wrapper {
+            border: 1px solid #999999;
+        }
+        /* Keeps spacer cells, especially those with very short heights (i.e. 5px), from being expanded by clients. (yes, the font-size IS supposed to be bigger than the line-height here. Weird, I know, but it's how I get certain clients to play along.)  */
+        .spacer {
+            font-size: 2px;
+            line-height: 1px;
+        }
+        /* Helper classes for if you want a border. Premailer will expand these to long-hand. */
+        .border {border: 1px solid #dddddd;}
+        .border-top { border-top: 1px solid #dddddd; }
+        .border-right { border-right: 1px solid #dddddd; }
+        .border-bottom { border-bottom: 1px solid #dddddd; }
+        .border-left { border-left: 1px solid #dddddd; }
+
+
+        /* Typography
+        ------------------
+        I try to avoid `p` and `h*` tags all-together. Wrap everything in styled table cells. */
+
+        /* Used for default body text styles */
+        .p {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #444444;
+        }
+        /* Screw <h*> tags. Wrap headings in table cells styled with these. */
+        .h1 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+            font-weight: bold;
+            border-bottom: 1px solid #dddddd;
+        }
+        .h2 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            color: #444444;
+            font-weight: bold;
+        }
+        /* For pre-header/preview, post-footer, and other small text. */
+        .small {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 11px;
+            line-height: 15px;
+            color: #444444;
+        }
+
+        /* I avoid `p`s and `h*`s all together, but here are useful styles in case*/
+        p {
+            margin: 1em 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: black !important;
+        }
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            color: #003399 !important;
+        }
+
+        /* Links
+        ----------- */
+        a, a span {
+            color: #003399;
+            text-decoration: underline;
+        }
+
+        /* Images
+        ----------- */
+        img {
+            display: block;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+        a img {
+            border: none;
+            text-decoration: none;
+        }
+        /* Apply this to cells containing only an image and be sure to make cell dimensions = img dimensions */
+        .img-cell {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 18px;
+            color: #999999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Wrap the whole darn thing in center tags -->
+<center>
+
+<!-- Begin "Page" wrapper (edit `bgcolor` to your preference) -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" id="backgroundTable">
+    <tr>
+        <td width="100%" align="center" valign="top" bgcolor="#F2F2F2" class="page">
+
+            $0
+
+        </td>
+    </tr>
+</table>
+<!-- End "Page" wrapper -->
+
+</center>
+
+</body>
+</html>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>:email</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Email - Template</description>
+</snippet>

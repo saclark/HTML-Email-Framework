@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<td width="$2" height="$3" align="left" valign="top" class="${1:img-cell}">$0</td>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>:td/xy</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Email - td (with Height)</description>
+</snippet>

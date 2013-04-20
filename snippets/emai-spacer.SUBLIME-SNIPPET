@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td width="${1:600}" height="${2:20}" align="left" valign="top" class="spacer"><br /></td>
+    </tr>
+</table>$0
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>:spacer</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.html</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Email - Spacer Table</description>
+</snippet>
