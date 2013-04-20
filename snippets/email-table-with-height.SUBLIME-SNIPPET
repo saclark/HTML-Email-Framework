@@ -2,7 +2,7 @@
     <content><![CDATA[
 <table cellspacing="0" cellpadding="0" border="0">
     <tr>
-        <td width="$2" width="$3" align="left" valign="top" class="${1:img-cell}">$0</td>
+        <td width="$2" width="$3" align="left" valign="top" class="$1">$0</td>
     </tr>
 </table>
 ]]></content>

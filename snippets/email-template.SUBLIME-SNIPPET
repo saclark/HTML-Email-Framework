@@ -5,24 +5,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>${1}</title>
+    <title>$1</title>
     <style type="text/css">
 
-    /* Run your email through Premailer (http://premailer.dialect.ca/) to bring these styles inline :)
-       It will:
-            * Discard any unused styles
-            * Convert everything to long-hand (email clients like that)
-            * Remove comments
-    */
+        /* Run your email through Premailer (http://premailer.dialect.ca/) to bring these styles inline :)
+           It will:
+                * Discard any unused styles
+                * Convert everything to long-hand (email clients like that)
+                * Remove comments
+        */
 
-    /* Unless otherwise stated, feel free to edit any of the colors in here all you want. I just have some of the standard colors that I go to in here. */
+        /* Unless otherwise stated, feel free to edit any of the colors in here all you want. I just have some of the standard colors that I go to in here. */
 
-        /* RESET
-        Takes care of client specific bugs and quirks. Do not edit this.
-        ================= */
-        #outlook a {
-            padding: 0;
-        }
+
+        /* Do Not Touch
+        ------------------
+        * In general, it's probably best not to touch these */
         body {
             width: 100% !important;
             margin: 0;
@@ -30,109 +28,31 @@
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
-        .ExternalClass {
-            width: 100%;
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-            line-height: 100%;
-        }
         #backgroundTable {
             margin: 0;
             padding: 0;
             width: 100% !important;
             line-height: 100% !important;
         }
-        /* End reset
-        ==================== */
-
-
-        /* Tables, layout, & Borders
-        -------------------------------
-        Use tables, tables, and more tables for layout and spacing. Nest them like your life depended on it. */
-
         /* Remove spacing around Outlook 07, 10 tables */
         table {
             border-collapse: collapse;
             mso-table-lspace: 0pt;
             mso-table-rspace: 0pt;
         }
-        /* Essentially, acts as the <body> of the email. I chose to call it "page." */
+        /* Essentially, this acts as the <body> of the email. I chose to call it "page." */
         .page, #backgroundTable {
             width: 100% !important;
             margin: 0;
             padding: 0;
             line-height: 100% !important;
         }
-        /* Holds the content (w/ exception to pre-header/preview and post-footer content) */
-        .outer-wrapper {
-            border: 1px solid #999999;
-        }
-        /* Keeps spacer cells, especially those with very short heights (i.e. 5px), from being expanded by clients. (yes, the font-size IS supposed to be bigger than the line-height here. Weird, I know, but it's how I get certain clients to play along.)  */
-        .spacer {
-            font-size: 2px;
-            line-height: 1px;
-        }
-        /* Helper classes for if you want a border. Premailer will expand these to long-hand. */
-        .border {border: 1px solid #dddddd;}
-        .border-top { border-top: 1px solid #dddddd; }
-        .border-right { border-right: 1px solid #dddddd; }
-        .border-bottom { border-bottom: 1px solid #dddddd; }
-        .border-left { border-left: 1px solid #dddddd; }
+        /* End "Do Not Touch" styles */
 
-
-        /* Typography
-        ------------------
-        I try to avoid `p` and `h*` tags all-together. Wrap everything in styled table cells. */
-
-        /* Used for default body text styles */
-        .p {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 20px;
-            color: #444444;
-        }
-        /* Screw <h*> tags. Wrap headings in table cells styled with these. */
-        .h1 {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 18px;
-            line-height: 26px;
-            color: #000000;
-            font-weight: bold;
-            border-bottom: 1px solid #dddddd;
-        }
-        .h2 {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            color: #444444;
-            font-weight: bold;
-        }
-        /* For pre-header/preview, post-footer, and other small text. */
-        .small {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 11px;
-            line-height: 15px;
-            color: #444444;
-        }
-
-        /* I avoid `p`s and `h*`s all together, but here are useful styles in case*/
-        p {
-            margin: 1em 0;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: black !important;
-        }
-        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-            color: #003399 !important;
-        }
 
         /* Links
         ----------- */
+        /* Add your link styling here */
         a, a span {
             color: #003399;
             text-decoration: underline;
@@ -140,6 +60,7 @@
 
         /* Images
         ----------- */
+        /* leave these styles, and add whatever else you need */
         img {
             display: block;
             outline: none;
@@ -150,13 +71,87 @@
             border: none;
             text-decoration: none;
         }
+
+        /* Helper Classes & Your Custom Styles
+        ------------------------------------------
+        * Use tables, tables, and more tables for layout, spacing, and styling thier contents. Nest them like your life depended on it. Tags like `p` or `h1` can be used, but only when used wisely and carefully with a attention to client support. I find it easier and much safer to simply use tables for everything.
+
+        * Apply the following classes to the table cell (<td>) holding the elements for which you want to apply the styles. Feel free to edit/add/remove as you please. These are simply some of the defaults I generally use. Yes, this css could be made more efficient, but remember, this will all go inline, so I try to keep things specific so as not to have certain styles applied unnecessarily to elements. */
+
+        .p, .h1, .h2, .small, .img-cell, .button {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        /* Used for default body text styles */
+        .p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #444444;
+        }
+
+        /* Screw <h*> tags. Wrap headings in table cells styled with these. */
+        .h1 {
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+            font-weight: bold;
+            border-bottom: 1px solid #dddddd;
+        }
+        .h2 {
+            font-size: 16px;
+            line-height: 24px;
+            color: #444444;
+            font-weight: bold;
+        }
+
+        /* For pre-header/preview, post-footer, and other small text. */
+        .small {
+            font-size: 11px;
+            line-height: 15px;
+            color: #444444;
+        }
+
+        /* Helper classes for if you want a border. Premailer will expand these to long-hand. */
+        .border {border: 1px solid #dddddd;}
+        .border-top { border-top: 1px solid #dddddd; }
+        .border-right { border-right: 1px solid #dddddd; }
+        .border-bottom { border-bottom: 1px solid #dddddd; }
+        .border-left { border-left: 1px solid #dddddd; }
+
         /* Apply this to cells containing only an image and be sure to make cell dimensions = img dimensions */
         .img-cell {
-            font-family: Helvetica, Arial, sans-serif;
             font-size: 12px;
             line-height: 18px;
             color: #999999;
             font-style: italic;
+        }
+
+        /* Button (image free) */
+        .button, .button a, .button a span {
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 5px;
+            text-decoration: none;
+        }
+
+        /* UseKeeps spacer cells, especially those with very short heights (i.e. 5px), from being expanded by clients. (yes, the font-size IS supposed to be bigger than the line-height here. Weird, I know, but it's how I get certain clients to play along.)  */
+        .spacer {
+            font-size: 2px;
+            line-height: 1px;
+        }
+
+
+        /* If you have to...
+        ------------------------
+        * Just in case you really want to use `p` and `h*` tags, these styles will help */
+        p {
+            margin: 1em 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: black !important;
+        }
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            color: #003399 !important;
         }
     </style>
 </head>
@@ -165,10 +160,10 @@
 <!-- Wrap the whole darn thing in center tags -->
 <center>
 
-<!-- Begin "Page" wrapper (edit `bgcolor` to your preference) -->
+<!-- Begin "Page" wrapper (don't forget to edit `bgcolor` to your preference!) -->
 <table width="100%" cellspacing="0" cellpadding="0" border="0" id="backgroundTable">
     <tr>
-        <td width="100%" align="center" valign="top" bgcolor="#F2F2F2" class="page">
+        <td width="100%" align="center" valign="top" bgcolor="#FFFFFF" class="page">
 
             $0
 

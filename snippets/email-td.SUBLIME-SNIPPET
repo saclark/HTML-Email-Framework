@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<td width="$2" align="left" valign="top" class="${1:p}">$0</td>
+<td width="$2" align="left" valign="top" class="$1">$0</td>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>:td</tabTrigger>
